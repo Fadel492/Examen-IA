@@ -1,6 +1,6 @@
 # Examen-IA
 
-## Descriptif:
+## Description:
 
 Les concurrents doivent utiliser des méthodes génératives pour créer leurs images de soumission et ne sont pas autorisés à faire des soumissions qui incluent des images déjà classées comme des chiens ou des versions modifiées de ces images.
 

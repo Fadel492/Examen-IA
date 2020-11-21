@@ -55,4 +55,11 @@ Kaggle calcule les scores MiFID publics et privés avec le même code, mais avec
 
 Une démo de notre code d'évaluation MiFID peut être vue ici .
 
-Notre flux de travail de calcul du MiFID public / privé est illustré ci-dessous:
+Notre flux de travail de calcul du MiFID public / privé est illustré ci-dessous
+
+#### xxxxx()
+
+
+Les versions soumises sont les versions 4 et 5 qui obtiennent un score de ** 30,7 et 30,3 sur le public **. La seule différence est que j'ai utilisé différentes probabilités d'échantillonnage de classe pour générer des images. La solution proposée ici est légitime, aucune mémorisation d'aucune sorte n'est faite.
+
+Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le jeu de données de métrique, modifiez les variables PATH et décommentez les lignes de score.

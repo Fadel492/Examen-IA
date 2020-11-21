@@ -63,3 +63,9 @@ Notre flux de travail de calcul du MiFID public / privé est illustré ci-dessou
 Les versions soumises sont les versions 4 et 5 qui obtiennent un score de ** 30,7 et 30,3 sur le public **. La seule différence est que j'ai utilisé différentes probabilités d'échantillonnage de classe pour générer des images. La solution proposée ici est légitime, aucune mémorisation d'aucune sorte n'est faite.
 
 Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le jeu de données de métrique, modifiez les variables PATH et décommentez les lignes de score.
+
+### References
+
+- NVIDIA's Progressive Growing of GANs paper : https://research.nvidia.com/publication/2017-10_Progressive-Growing-of
+- CGANs with Projection Discriminator : https://arxiv.org/pdf/1802.05637.pdf
+- The modeling part of the kernel is taken from : https://github.com/akanimax/pro_gan_pytorch

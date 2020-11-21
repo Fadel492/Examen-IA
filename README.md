@@ -64,6 +64,9 @@ Les versions soumises sont les versions 4 et 5 qui obtiennent un score de ** 30,
 
 Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le jeu de données de métrique, modifiez les variables PATH et décommentez les lignes de score.
 
+####  Concept:
+techniques utilisés
+
 ### References
 
 - NVIDIA's Progressive Growing of GANs paper : https://research.nvidia.com/publication/2017-10_Progressive-Growing-of

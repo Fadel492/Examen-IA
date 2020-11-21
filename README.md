@@ -67,6 +67,18 @@ Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le 
 ####  Concept:
 techniques utilisés
 
+Sous-échantillonnage à l'aide de convolutions foulées
+Suréchantillonnage à l'aide de convolutions foulées
+Utilisez LeakyReLU
+Utiliser la normalisation par lots
+Utiliser l'initialisation du poids gaussien
+Utiliser la descente de gradient stochastique Adam
+Mettre les images à l'échelle [-1,1]
+Utiliser un espace latent gaussien
+Lots séparés d'images réelles et fausses
+Utiliser le lissage d'étiquette
+Utiliser des étiquettes bruyantes
+
 ### References
 
 - NVIDIA's Progressive Growing of GANs paper : https://research.nvidia.com/publication/2017-10_Progressive-Growing-of

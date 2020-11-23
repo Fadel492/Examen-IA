@@ -65,7 +65,12 @@ ce terme de memorisation est applique au FID
 <img width="206" alt="formule3" src="https://user-images.githubusercontent.com/72967454/100007952-1774ac80-2dcd-11eb-9524-387eb50a2bcf.PNG">
 
 
-Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le jeu de données de métrique, modifiez les variables PATH et décommentez les lignes de score.
+Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le jeu de données de métrique, modifiez les variables PATH et décommentez les lignes de score
+
+#### Difficultes:
+
+transformations applied are horizontal flipping and re-scaling the images between- -1 et 1. En effet , lactivation tanh sur la derniere couche du generateur permet pour les images de cette gamme. Nous pouvons remarquez la difficulte de latache. Les imagespresentent une variance beaucoup elevée que celle de l'ensemble des données .
+Deja ,DCGAN a eu du mal à produire des resultats de haute qualité en utilisant cet ensemble de données par consequent je m'attends a ce que les chiens generes soient de mauvaise qualite.
 
 ####  Concept:
 techniques utilisés

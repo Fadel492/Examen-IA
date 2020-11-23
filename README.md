@@ -28,6 +28,10 @@ Plus le MiFID est petit, meilleures sont vos images générées.
 
 Publié à l'origine ici ( github ), le FID, ainsi que le score de démarrage (IS) , sont tous deux couramment utilisés dans les publications récentes comme norme pour les méthodes d'évaluation des GAN.
 
+
+<img width="365" alt="fid" src="https://user-images.githubusercontent.com/72967454/100006259-83a1e100-2dca-11eb-96d1-afc09a378d8f.PNG">
+
+
 Dans FID, nous utilisons le réseau Inception pour extraire des entités d'une couche intermédiaire. Ensuite, nous modélisons la distribution des données pour ces caractéristiques en utilisant une distribution gaussienne multivariée avec moyenne µ et covariance Σ. Le FID entre les images réellesr et images générées g est calculé comme suit:
 
 FID = | |μr-μg||2+ Tr (Σr+Σg- 2 (ΣrΣg)1 / 2)

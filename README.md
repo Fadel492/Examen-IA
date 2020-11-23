@@ -2,26 +2,25 @@
 
 ## Description:
 
-Les concurrents doivent utiliser des méthodes génératives pour créer leurs images de soumission et ne sont pas autorisés à faire des soumissions qui incluent des images déjà classées comme des chiens ou des versions modifiées de ces images.
+Les Réseaux Adversaires Génératifs (GAN) génèrent un image suivant une distribution apprise en utilisant un vecteur aleatoire dans un
+un espace latent. Les GAN se sont avérés être des outils de synthèse puissants mais difficiles à manipuler. L'adversaire génératif convolutionnel profond
+Réseau (DCGAN) GAN entièrement convolutif qui a atteint l'état des resultats artistiques lors de sa sortie en 2016. Plusieurs
+des résultats artistiques lors de sa sortie en 2016. Plusieurs
+les détails de mise en œuvre sont donnés dans le document DCGAN qui améliorent la convergence. Dans ce projet, nous proposons d'implémenter un DCGAN pour générer des chiens, en utilisant un sous-ensemble de l'ensemble de données ImageNet. 
 
 ###  objectif:
 
 ####  Remarque
-Utilisez vos compétences de formation pour créer des images, plutôt que de les identifier. Vous utiliserez des GAN, qui sont à la frontière créative de l'apprentissage automatique. Vous pourriez penser aux GAN comme à des artistes robots en un sens, capables de créer des images étrangement réalistes, et même des mondes numériques.
-
-#### Explication:
 
 Un réseau antagoniste génératif (GAN) est une classe de système d'apprentissage automatique inventé par Ian Goodfellow en 2014. Deux réseaux de neurones se font concurrence dans un jeu. Étant donné un ensemble d'apprentissage, cette technique apprend à générer de nouvelles données avec les mêmes statistiques que l'ensemble d'apprentissage.
 Dans cette compétition, vous entraînerez des modèles génératifs pour créer des images de chiens. Seulement cette fois… il n'y a pas de données de vérité terrain à prédire. Ici, vous soumettrez les images et serez notés en fonction de la qualité de ces images comme des chiens provenant de réseaux de neurones pré-entraînés. Prenez ces images, par exemple. Pouvez-vous dire lesquels sont réels ou générés?
 
 (Images des chiens png)
 
-Pourquoi les chiens? Nous avons choisi des chiens parce que, eh bien, qui n'aime pas regarder des photos d'adorables chiots? De plus, les chiens peuvent être classés en plusieurs sous-catégories (race, couleur, taille), ce qui en fait des candidats idéaux pour la génération d'images.
-Les méthodes génératives (en particulier les GAN) sont actuellement utilisées à divers endroits sur Kaggle pour l'augmentation des données. Leur potentiel est vaste; ils peuvent apprendre à imiter toute distribution de données dans n'importe quel domaine: photographies, dessins, musique et prose. En cas de succès, non seulement vous contribuerez à faire progresser l'état de l'art dans la création d'images génératives, mais vous nous permettrez de créer plus d'expériences dans une variété de domaines à l'avenir.
+. L'idée est de conjointement former deux réseaux de neurones sur un ensemble de données: un générateur et un discriminateur. - Le générateur G vise à générer des échantillons de bonne qualité similaires à ceux dans l'ensemble de données en apprenant sa distribution. Il prend en entrée un vecteur de bruit z qui sera généré à partir d'une distribution pz (classiquement, pz = N (0, 1)), et produit une fausse image. - Le discriminateur D vise à distinguer les images générées par le générateur à partir d'images de l'ensemble de données. Cela prendra soit comme images d'entrée générées par le générateur, ou des images réelles suivant la distribution de l'ensemble de données pdata et renvoie la probabilité que l'échantillon choisi soit réel. Ensuite, le discriminateur est un simple classificateur d'image qui apprendra la probabilité que l'image est réelle, en utilisant classiquement l'entropie croisée binaire (BCE). Sur le 2 T. VIEL d'autre part, le générateur utilisera le discriminateur pour évaluer la qualité de son échantillons générés, et visent à produire des images que le discriminateur estime être à partir des données d'origine, c'est-à-dire maximiser la probabilité de sortie. Suivant ce principe, la perte suivante est optimisée conjointement: min g max ré Ex∼pdata [log D (x)] + Ez∼pz [log (1 - D (G (z)))] (1) Où D est l'ensemble des paramètres du discriminateur et G celui des Générateur. Dans le cas du réseau de neurones, nous visons à les apprendre en utilisant la rétropropagation. La formation GAN peut être vue comme un jeu minimax à deux joueurs, et ces types de les jeux sont généralement instables, par conséquent, il y a peu de garanties sur la convergence des GAN.
 
 ## Evaluation:
 Les soumissions sont évaluées sur MiFID (Memorization-Informed Fréchet Inception Distance), qui est une modification de Fréchet Inception Distance (FID) .
-
 Plus le MiFID est petit, meilleures sont vos images générées.
 
 
@@ -52,15 +51,6 @@ Enfin, ce terme de mémorisation est appliqué au FID:
 Mje FjeD = FjeD ⋅1rét h r
 Le workflow de Kaggle calcule la MiFID pour les scores publics et privés
 Kaggle calcule les scores MiFID publics et privés avec le même code, mais avec différents modèles pré-entraînés et images d'évaluation. Le réseau neuronal public pré-train est Inception , et les images publiques utilisées pour l'évaluation sont les chiens ImageNet (les 120 races). Nous ne partagerons pas le modèle privé ou l'ensemble de données utilisé pour le score MiFID privé.
-
-Une démo de notre code d'évaluation MiFID peut être vue ici .
-
-Notre flux de travail de calcul du MiFID public / privé est illustré ci-dessous
-
-#### xxxxx()
-
-
-Les versions soumises sont les versions 4 et 5 qui obtiennent un score de ** 30,7 et 30,3 sur le public **. La seule différence est que j'ai utilisé différentes probabilités d'échantillonnage de classe pour générer des images. La solution proposée ici est légitime, aucune mémorisation d'aucune sorte n'est faite.
 
 Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le jeu de données de métrique, modifiez les variables PATH et décommentez les lignes de score.
 

@@ -46,6 +46,12 @@ La distance de mémorisation est définie comme la distance cosinus minimale de 
 
 Sous forme mathématique:
 
+<img width="254" alt="formule 1" src="https://user-images.githubusercontent.com/72967454/100007882-0461dc80-2dcd-11eb-9d35-02860b227a0c.PNG">
+
+<img width="139" alt="formule2PNG" src="https://user-images.githubusercontent.com/72967454/100007910-0d52ae00-2dcd-11eb-8390-53cdc97cb9f7.PNG">
+
+<img width="206" alt="formule3" src="https://user-images.githubusercontent.com/72967454/100007952-1774ac80-2dcd-11eb-9524-387eb50a2bcf.PNG">
+
 réje j= 1 - c o s (Fgje,Fr j) = 1 -Fgje⋅Fr j|Fgje| |Fr j|
 où Fg et Frreprésenter les images générées / réelles dans l'espace des fonctionnalités (défini dans les réseaux pré-formés); etFgje et Fr j représenter le jet h et jt h vecteurs de Fg et Fr, respectivement.
 

@@ -55,7 +55,12 @@ re definit la distance minimale d'une certaine image à travers les images réel
 
 <img width="365" alt="fid" src="https://user-images.githubusercontent.com/72967454/100006259-83a1e100-2dca-11eb-96d1-afc09a378d8f.PNG">
 
+
+
 ce terme de memorisation est applique au FID
+
+
+
 <img width="206" alt="formule3" src="https://user-images.githubusercontent.com/72967454/100007952-1774ac80-2dcd-11eb-9524-387eb50a2bcf.PNG">
 
 

@@ -14,7 +14,7 @@ Un réseau antagoniste génératif (GAN) est une classe de système d'apprentiss
 Dans cette compétition, vous entraînerez des modèles génératifs pour créer des images de chiens. Seulement cette fois… il n'y a pas de données de vérité terrain à prédire. Ici, vous soumettrez les images et serez notés en fonction de la qualité de ces images comme des chiens provenant de réseaux de neurones pré-entraînés. Prenez ces images, par exemple. Pouvez-vous dire lesquels sont réels ou générés?
 
 <p align='center'>
-![chien](https://user-images.githubusercontent.com/72967454/100002925-9a920480-2dc5-11eb-8684-fc796f81a36c.jpg)
+<img width="365" alt="fid" src="https://user-images.githubusercontent.com/72967454/100002925-9a920480-2dc5-11eb-8684-fc796f81a36c.jpg">
 
 ### Objectif
 

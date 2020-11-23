@@ -35,10 +35,12 @@ Publié à l'origine ici ( github ), le FID, ainsi que le score de démarrage (I
 Dans FID, nous utilisons le réseau Inception pour extraire des entités d'une couche intermédiaire. Ensuite, nous modélisons la distribution des données pour ces caractéristiques en utilisant une distribution gaussienne multivariée avec moyenne µ et covariance Σ. Le FID entre les images réellesr et images générées g est calculé comme suit:
 
 FID = | |μr-μg||2+ Tr (Σr+Σg- 2 (ΣrΣg)1 / 2)
-où Trrésume tous les éléments diagonaux. Le FID est calculé en calculant la distance de Fréchet entre deux Gaussiens ajustés pour représenter les caractéristiques du réseau Inception.
+
+Tr: tous les elements diagonaux.
+<img width="456" alt="formule" src="https://user-images.githubusercontent.com/72967454/100007161-ee075100-2dcb-11eb-8f67-1d204e325e55.PNG">
+
 
 Qu'est-ce que MiFID (Memorization-Informed FID)?
-En plus du FID, Kaggle prend en compte la mémorisation des échantillons d'entraînement.
 
 La distance de mémorisation est définie comme la distance cosinus minimale de tous les échantillons d'apprentissage dans l'espace des fonctionnalités, moyennée sur tous les échantillons d'image générés par l'utilisateur. Cette distance est seuillée et attribuée à 1.0 si la distance dépasse un epsilon prédéfini.
 

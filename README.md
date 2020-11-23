@@ -12,6 +12,7 @@ les détails de mise en œuvre sont donnés dans le document DCGAN qui améliore
 
 Un réseau antagoniste génératif (GAN) est une classe de système d'apprentissage automatique inventé par Ian Goodfellow en 2014. Deux réseaux de neurones se font concurrence dans un jeu. Étant donné un ensemble d'apprentissage, cette technique apprend à générer de nouvelles données avec les mêmes statistiques que l'ensemble d'apprentissage.
 Dans cette compétition, vous entraînerez des modèles génératifs pour créer des images de chiens. Seulement cette fois… il n'y a pas de données de vérité terrain à prédire. Ici, vous soumettrez les images et serez notés en fonction de la qualité de ces images comme des chiens provenant de réseaux de neurones pré-entraînés. Prenez ces images, par exemple. Pouvez-vous dire lesquels sont réels ou générés?
+<p align='center'>
 
 ![chien](https://user-images.githubusercontent.com/72967454/100002925-9a920480-2dc5-11eb-8684-fc796f81a36c.jpg)
 
@@ -27,13 +28,13 @@ Plus le MiFID est petit, meilleures sont vos images générées.
 #### Definition FID
 
 Publié à l'origine ici ( github ), le FID, ainsi que le score de démarrage (IS) , sont tous deux couramment utilisés dans les publications récentes comme norme pour les méthodes d'évaluation des GAN.
-
+<p align='center'>
 
 <img width="365" alt="fid" src="https://user-images.githubusercontent.com/72967454/100006259-83a1e100-2dca-11eb-96d1-afc09a378d8f.PNG">
 
 
 Dans FID, nous utilisons le réseau Inception pour extraire des entités d'une couche intermédiaire. Ensuite, nous modélisons la distribution des données pour ces caractéristiques en utilisant une distribution gaussienne multivariée avec moyenne µ et covariance Σ. Le FID entre les images réellesr et images générées g est calculé comme suit:
-
+<p align='center'>
 <img width="456" alt="formule" src="https://user-images.githubusercontent.com/72967454/100007161-ee075100-2dcb-11eb-8f67-1d204e325e55.PNG">
 
 Tr: donne le resume de tous les elements diagonnaux
@@ -43,16 +44,16 @@ Tr: donne le resume de tous les elements diagonnaux
 La distance de mémorisation est définie comme la distance cosinus minimale de tous les échantillons d'apprentissage dans l'espace des fonctionnalités, moyennée sur tous les échantillons d'image générés par l'utilisateur. Cette distance est seuillée et attribuée à 1.0 si la distance dépasse un epsilon prédéfini.
 
 Sous forme mathématique:
-
+<p align='center'>
 <img width="254" alt="formule 1" src="https://user-images.githubusercontent.com/72967454/100007882-0461dc80-2dcd-11eb-9d35-02860b227a0c.PNG">
 
 Fg represente les images generées réelles dans l'espace des fonctionalités
 Fgje et Fr represente le je h jt et h vecteurs de Fg et Fr respectivement.
-
+<p align='center'>
 <img width="139" alt="formule2PNG" src="https://user-images.githubusercontent.com/72967454/100007910-0d52ae00-2dcd-11eb-8390-53cdc97cb9f7.PNG">
 
 re definit la distance minimale d'une certaine image à travers les images réelles puis moyennée sur toutes les images generées.
-
+<p align='center'>
 <img width="365" alt="fid" src="https://user-images.githubusercontent.com/72967454/100006259-83a1e100-2dca-11eb-96d1-afc09a378d8f.PNG">
 
 
@@ -60,7 +61,7 @@ re definit la distance minimale d'une certaine image à travers les images réel
 ce terme de memorisation est applique au FID
 
 
-
+<p align='center'>
 <img width="206" alt="formule3" src="https://user-images.githubusercontent.com/72967454/100007952-1774ac80-2dcd-11eb-9524-387eb50a2bcf.PNG">
 
 

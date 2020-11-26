@@ -26,6 +26,7 @@ En effet cela prend en entrée les images generées par le generateur ou des ima
 De plus le generateur utilise le discriminateur pour evaluer la qualité de ses echantillon generés et vise à produire des images  à partir des image d'origine c'est à dire maximiser la conversion  de sortie.
 Suivant ce principe, la perte  suivante est optimisée conjointement :
 
+<p align='center'>
 <img width="287" alt="GAN" src="https://user-images.githubusercontent.com/72967454/100371822-a4f01080-3008-11eb-98b1-e42be6e83c19.PNG">
 
 

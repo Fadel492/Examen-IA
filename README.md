@@ -25,7 +25,10 @@ En effet il prend en entrée un vecteur  de bruit Z qui sera  generé  à partir
 En effet cela prend en entrée les images generées par le generateur ou des images réelles suivant la distribution de l'ensemble de données  Pdata en utilisant l'entropie croisée binaire de maniere classique (BCE).
 De plus le generateur utilise le discriminateur pour evaluer la qualité de ses echantillon generés et vise à produire des images  à partir des image d'origine c'est à dire maximiser la conversion  de sortie.
 Suivant ce principe, la perte  suivante est optimisée conjointement :
-<img width="254" alt="formule 1" src="https://user-images.githubusercontent.com/72967454/100371155-a53bdc00-3007-11eb-84df-33f7e1980dbb.PNG">
+
+<img width="287" alt="GAN" src="https://user-images.githubusercontent.com/72967454/100371822-a4f01080-3008-11eb-98b1-e42be6e83c19.PNG">
+
+
 La formation GAN peut etre considere comme un jeu minimal à deux joueur et ces types de jeux sont generalement instable par consequent il y a peu de garanties sur la convergence.
 
 ## Evaluation:

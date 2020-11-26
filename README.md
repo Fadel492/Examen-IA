@@ -21,7 +21,7 @@ L'idée  generale est de joindre deux reseaux de neurones sur un ensemble de don
 - un Generateur vise à generer des echantillons de bonne qualite similaire à ceux dans l'ensemble de données en apprenant sa distribution.
 En effet il prend en entrée un vecteur  de bruit Z qui sera  generé  à partir d'une distribution PZ qui suit une loi normale centrée reduite et produit une fausse image.
 
--un discriminateur  vise à distinguer les images generées par le generateur à partir d'images de l'ensemble de données.
+- un discriminateur vise à distinguer les images generés par le generateur à partir de l'ensemble des données.  
 En effet cela prend en entrée les images generées par le generateur ou des images réelles suivant la distribution de l'ensemble de données  Pdata en utilisant l'entropie croisée binaire de maniere classique (BCE).
 De plus le generateur utilise le discriminateur pour evaluer la qualité de ses echantillon generés et vise à produire des images  à partir des image d'origine c'est à dire maximiser la conversion  de sortie.
 Suivant ce principe, la perte  suivante est optimisée conjointement :
@@ -86,16 +86,15 @@ Deja ,DCGAN a eu du mal à produire des resultats de haute qualité en utilisant
 
 ####  Deroulemnt du code
 
-Sous-échantillonnage à l'aide de convolutions foulées
-Suréchantillonnage à l'aide de convolutions foulées
-Utilisez LeakyReLU
-Utiliser la normalisation par lots
-Utiliser l'initialisation du poids gaussien
-Utiliser la descente de gradient stochastique Adam
-Mettre les images à l'échelle [-1,1]
-Utiliser un espace latent gaussien
-Lots séparés d'images réelles et fausses
-Utiliser le lissage d'étiquette
-Utiliser des étiquettes bruyantes
+- Sous echantillonnage à l'aide de la convolutions foulées
+- Surechantillonnages  à l'aide de la convolution foulées
+- Utilisez LeakyRelu 
+- Utiliser l'initialisation des poids gaussien 
+- Utilisation de la gradient stochastique Adam
+- Mettre les images à l'echelle -1 et 1
+- Utiliser un espace latent gaussien 
+- Lots separés d'images réelles et fausses
+- Utiliser le lissage d'etiquette 
+- Utiliser le  lissage  des etiquettes bruyantes
 
 #### Concept

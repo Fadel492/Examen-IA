@@ -98,3 +98,6 @@ Deja ,DCGAN a eu du mal à produire des resultats de haute qualité en utilisant
 - Utiliser le  lissage  des etiquettes bruyantes
 
 #### Concept
+
+- GAN: 
+  Les modèles génératifs sont une famille d'architectures d'IA dont le but est de créer des échantillons de données à partir de zéro. Ils y parviennent en capturant les distributions de données du type de choses que nous voulons générer

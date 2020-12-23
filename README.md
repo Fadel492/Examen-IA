@@ -81,7 +81,7 @@ Si vous souhaitez évaluer les résultats localement, assurez-vous d'ajouter le 
 
 #### Difficultes:
 
-transformations applied are horizontal flipping and re-scaling the images between- -1 et 1. En effet , lactivation tanh sur la derniere couche du generateur permet pour les images de cette gamme. Nous pouvons remarquez la difficulte de latache. Les imagespresentent une variance beaucoup elevée que celle de l'ensemble des données .
+Les transformations appliquée sont le retournement horizontale et la mise en echelle des images entre -1 et 1. En effet , lactivation tanh sur la derniere couche du generateur permet pour les images de cette gamme. Nous pouvons remarquez la difficulte de latache. Les imagespresentent une variance beaucoup elevée que celle de l'ensemble des données .
 Deja ,DCGAN a eu du mal à produire des resultats de haute qualité en utilisant cet ensemble de données par consequent je m'attends a ce que les chiens generes soient de mauvaise qualite.
 
 ####  Deroulemnt du code
@@ -100,4 +100,4 @@ Deja ,DCGAN a eu du mal à produire des resultats de haute qualité en utilisant
 #### Concept
 
 - GAN: 
-  Les modèles génératifs sont une famille d'architectures d'IA dont le but est de créer des échantillons de données à partir de zéro. Ils y parviennent en capturant les distributions de données du type de choses que nous voulons générer
+Les modèles génératifs sont une famille d'architectures d'IA dont le but est de créer des échantillons de données à partir de zéro. Ils y parviennent en capturant les    distributions de données du type de choses que nous voulons générer
